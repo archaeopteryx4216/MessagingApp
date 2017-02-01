@@ -1,46 +1,24 @@
 #!/usr/bin/env python3
-from Message import *
-from socket import *
-from threading import *
-import pickle
 
+from Client import *
+import sys
 
-
-class Client:
-# Constructor for the class
-    def __init__(self,socket):
-        self.socket = socket
-        self.prompt = '>>> '
-        self.requestName()
-        self.textInputThread = Thread(target=self.textInput)
-        self.socketInputThread = Thread(target=self.socketInput)
-    def startShell(self):
-        print("Starting shell...")
-        self.textInputThread.start()
-        self.socketInputThread.daemon = True
-        self.socketInputThread.start()
-        self.textInputThread.join()
-    def requestName(self):
-        gotName = False
-        while not gotName:
-            desiredName = input("Please enter desired username: ")
-            self.socket.sendall(desiredName.encode())
-            response = self.socket.recv(1024).decode()
-            if response == "good":
-                gotName = True
-                self.name = desiredName
-            else:
-                print("Sorry, that name is already in use.")
-    def socketInput(self):
-        try:
-            while True:
-                data = self.socket.recv(1024)
-                message = pickle.loads(data)
-                print(message)
-                print(self.prompt,end="",flush=True)
-        finally:
+class Admin(Client):
+    def __init__(self,sock):
+        super().__init__(sock)
+        self.password = input("Please enter server's password: ")
+        self.verify(self.password)
+    def verify(self,password):
+        ver = ServerMessage("\\passwd",[self.password],self.name,"server")
+        sendString = pickle.dumps(ver)
+        self.socket.sendall(sendString)
+        retString = self.socket.recv(1024)
+        retMessage = pickle.loads(retString)
+        print(retMessage)
+        print(self.prompt,end="",flush=True)
+        if retMessage.text == "fail":
             self.socket.close()
-            return
+            sys.exit()
     def textInput(self):
         while True:
             text = input(self.prompt)
@@ -61,11 +39,20 @@ class Client:
                     elif words[0] == "\\prompt":
                         self.prompt = " ".join(words[1:]) + " "
                     elif words[0] == "\\users":
-                        message = ServerMessage("\\users",[],self.name,"server")
+                        message = ServerMessage("\\users",[],self.name,"Server")
                         sendString = pickle.dumps(message)
                         self.socket.sendall(sendString)
                     elif words[0] == "\\whoami":
                         print(self.name)
+                    elif words[0] == "\\kick":
+                        message = ServerMessage("\\kick",[words[1]],self.name,"Server")
+                        sendString = pickle.dumps(message)
+                        self.socket.sendall(sendString)
+                    elif words[0] == "\\kill":
+                        message = ServerMessage("\\kill",[],self.name,"Server")
+                        sendString = pickle.dumps(message)
+                        self.socket.sendall(sendString)
+                        pass
                     elif words[0] == "\\help":
                         print("\\help: prints this help message")
                         print("\\whoami: prints your username")
@@ -73,10 +60,11 @@ class Client:
                         print("\\prompt <your text>: changes the prompt to whatever you enter for <your text>")
                         print("\\pm <name> <your text>: sends <your text> to whoever <name> is, provided they are connected to the server.")
                         print("\\users: prints a list of all users currently connected to the server")
+                        print("\\kick <usernam>: removes username from the server if they are connected")
+                        print("\\kill: shuts down the server cleanly")
                         print("If no command is given, then all text is broadcast to all users")
                     else:
                         print("Error, unrecognized command {}".format(words[0]))
-
 
 def main():
     config = open("Config.txt")
@@ -96,7 +84,7 @@ def main():
         port = int(input("Please enter port number: "))
     sock = socket(AF_INET,SOCK_STREAM)
     sock.connect((hostname,port))
-    client = Client(sock)
-    client.startShell()
+    admin = Admin(sock)
+    admin.startShell()
 
 if __name__ == "__main__": main()
