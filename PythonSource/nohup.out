@@ -1,0 +1,217 @@
+Traceback (most recent call last):
+  File "Server.py", line 88, in <module>
+    if __name__ == "__main__": main()
+  File "Server.py", line 83, in main
+    sock.bind(('',8881))
+OSError: [Errno 98] Address already in use
+Connected from:  ('131.212.248.150', 33561)
+Assigned name Bill to address  ('131.212.248.150', 33561)
+Got message from Bill
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x04\x00\x00\x00Billq\x04X\x04\x00\x00\x00destq\x05X\x00\x00\x00\x00q\x06X\x06\x00\x00\x00typeIDq\x07X\x06\x00\x00\x00clientq\x08X\x04\x00\x00\x00textq\tX\x06\x00\x00\x00Hello!q\nub.'
+New data!
+Client message:  [Bill=>]: Hello!
+Got message from Bill
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x04\x00\x00\x00Billq\x04X\x04\x00\x00\x00destq\x05X\x06\x00\x00\x00serverq\x06X\x04\x00\x00\x00argsq\x07]q\x08X\x03\x00\x00\x00cmdq\tX\x06\x00\x00\x00\\usersq\nX\x06\x00\x00\x00typeIDq\x0bh\x06ub.'
+New data!
+Server command:  \users
+Got message from Bill
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x04\x00\x00\x00Billq\x04X\x04\x00\x00\x00destq\x05X\x00\x00\x00\x00q\x06X\x06\x00\x00\x00typeIDq\x07X\x06\x00\x00\x00clientq\x08X\x04\x00\x00\x00textq\tX\x02\x00\x00\x00Hiq\nub.'
+New data!
+Client message:  [Bill=>]: Hi
+Got message from Bill
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x04\x00\x00\x00Billq\x04X\x04\x00\x00\x00destq\x05X\x06\x00\x00\x00serverq\x06X\x04\x00\x00\x00argsq\x07]q\x08X\x03\x00\x00\x00cmdq\tX\x06\x00\x00\x00\\usersq\nX\x06\x00\x00\x00typeIDq\x0bh\x06ub.'
+New data!
+Server command:  \users
+Got message from Bill
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x04\x00\x00\x00Billq\x04X\x04\x00\x00\x00destq\x05X\x06\x00\x00\x00serverq\x06X\x04\x00\x00\x00argsq\x07]q\x08X\x03\x00\x00\x00cmdq\tX\x06\x00\x00\x00\\usersq\nX\x06\x00\x00\x00typeIDq\x0bh\x06ub.'
+New data!
+Server command:  \users
+Got message from Bill
+newData:  b''
+Disconnected from:  ('131.212.248.150', 33561)
+Connected from:  ('73.242.73.117', 36462)
+Assigned name IPhone to address  ('73.242.73.117', 36462)
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x06\x00\x00\x00IPhoneq\x04X\x04\x00\x00\x00textq\x05X\x06\x00\x00\x00whoamiq\x06X\x04\x00\x00\x00destq\x07X\x00\x00\x00\x00q\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [IPhone=>]: whoami
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00destq\x03X\x06\x00\x00\x00serverq\x04X\x04\x00\x00\x00argsq\x05]q\x06X\x06\x00\x00\x00typeIDq\x07h\x04X\x06\x00\x00\x00sourceq\x08X\x06\x00\x00\x00IPhoneq\tX\x03\x00\x00\x00cmdq\nX\x06\x00\x00\x00\\usersq\x0bub.'
+New data!
+Server command:  \users
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x06\x00\x00\x00IPhoneq\x04X\x04\x00\x00\x00textq\x05X\x1c\x00\x00\x00\x1b[C\x1b[C\x1b[C\x1b[C\x1b[C\x1b[C\x1b[C\x1b[C\x1b[C\x1bq\x06X\x04\x00\x00\x00destq\x07X\x00\x00\x00\x00q\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [IPhone=>]: [C[C[C[C[C[C[C[C[C
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x06\x00\x00\x00IPhoneq\x04X\x04\x00\x00\x00textq\x05X\t\x00\x00\x00Hello Me!q\x06X\x04\x00\x00\x00destq\x07X\x06\x00\x00\x00IPhoneq\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [IPhone=>IPhone]: Hello Me!
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x06\x00\x00\x00IPhoneq\x04X\x04\x00\x00\x00textq\x05X\x02\x00\x00\x00lsq\x06X\x04\x00\x00\x00destq\x07X\x00\x00\x00\x00q\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [IPhone=>]: ls
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00destq\x03X\x06\x00\x00\x00serverq\x04X\x04\x00\x00\x00argsq\x05]q\x06X\x06\x00\x00\x00typeIDq\x07h\x04X\x06\x00\x00\x00sourceq\x08X\x06\x00\x00\x00IPhoneq\tX\x03\x00\x00\x00cmdq\nX\x06\x00\x00\x00\\usersq\x0bub.'
+New data!
+Server command:  \users
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x06\x00\x00\x00IPhoneq\x04X\x04\x00\x00\x00textq\x05X\x04\x00\x00\x00Testq\x06X\x04\x00\x00\x00destq\x07X\x06\x00\x00\x00badusrq\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [IPhone=>badusr]: Test
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00destq\x03X\x06\x00\x00\x00serverq\x04X\x04\x00\x00\x00argsq\x05]q\x06X\x06\x00\x00\x00typeIDq\x07h\x04X\x06\x00\x00\x00sourceq\x08X\x06\x00\x00\x00IPhoneq\tX\x03\x00\x00\x00cmdq\nX\x06\x00\x00\x00\\usersq\x0bub.'
+New data!
+Server command:  \users
+Got message from IPhone
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x06\x00\x00\x00IPhoneq\x04X\x04\x00\x00\x00textq\x05X\x06\x00\x00\x00Hi me!q\x06X\x04\x00\x00\x00destq\x07X\x06\x00\x00\x00IPhoneq\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [IPhone=>IPhone]: Hi me!
+Got message from IPhone
+newData:  b''
+Disconnected from:  ('73.242.73.117', 36462)
+Connected from:  ('131.212.248.130', 38114)
+Assigned name  to address  ('131.212.248.130', 38114)
+Got message from 
+newData:  b''
+Disconnected from:  ('131.212.248.130', 38114)
+Connected from:  ('131.212.248.130', 38119)
+Assigned name Bill to address  ('131.212.248.130', 38119)
+Got message from Bill
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00typeIDq\x03X\x06\x00\x00\x00serverq\x04X\x03\x00\x00\x00cmdq\x05X\x06\x00\x00\x00\\usersq\x06X\x04\x00\x00\x00destq\x07h\x04X\x04\x00\x00\x00argsq\x08]q\tX\x06\x00\x00\x00sourceq\nX\x04\x00\x00\x00Billq\x0bub.'
+New data!
+Server command:  \users
+Got message from Bill
+newData:  b''
+Disconnected from:  ('131.212.248.130', 38119)
+Connected from:  ('73.242.73.117', 36464)
+Assigned name PI to address  ('73.242.73.117', 36464)
+Connected from:  ('131.212.248.130', 38024)
+Assigned name Pi to address  ('131.212.248.130', 38024)
+Got message from Pi
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x03\x00\x00\x00cmdq\x03X\x06\x00\x00\x00\\usersq\x04X\x04\x00\x00\x00argsq\x05]q\x06X\x06\x00\x00\x00typeIDq\x07X\x06\x00\x00\x00serverq\x08X\x04\x00\x00\x00destq\th\x08X\x06\x00\x00\x00sourceq\nX\x02\x00\x00\x00Piq\x0bub.'
+New data!
+Server command:  \users
+Got message from Pi
+newData:  b''
+Disconnected from:  ('131.212.248.130', 38024)
+Connected from:  ('131.212.248.130', 38029)
+Assigned name Alex to address  ('131.212.248.130', 38029)
+Got message from Alex
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00argsq\x03]q\x04X\x03\x00\x00\x00cmdq\x05X\x06\x00\x00\x00\\usersq\x06X\x06\x00\x00\x00sourceq\x07X\x04\x00\x00\x00Alexq\x08X\x04\x00\x00\x00destq\tX\x06\x00\x00\x00serverq\nX\x06\x00\x00\x00typeIDq\x0bh\nub.'
+New data!
+Server command:  \users
+Got message from Alex
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x04\x00\x00\x00Alexq\x04X\x04\x00\x00\x00destq\x05X\x00\x00\x00\x00q\x06X\x04\x00\x00\x00textq\x07X\x06\x00\x00\x00Hello!q\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [Alex=>]: Hello!
+Got message from Alex
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x04\x00\x00\x00Alexq\x04X\x04\x00\x00\x00destq\x05X\x02\x00\x00\x00PIq\x06X\x04\x00\x00\x00textq\x07X\x06\x00\x00\x00Hi Pi!q\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00clientq\nub.'
+New data!
+Client message:  [Alex=>PI]: Hi Pi!
+Got message from PI
+newData:  b''
+Disconnected from:  ('73.242.73.117', 36464)
+Got message from Alex
+newData:  b''
+Disconnected from:  ('131.212.248.130', 38029)
+Connected from:  ('131.212.251.125', 20128)
+Assigned name Alex to address  ('131.212.251.125', 20128)
+Got message from Alex
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x03\x00\x00\x00cmdq\x03X\x06\x00\x00\x00\\usersq\x04X\x06\x00\x00\x00sourceq\x05X\x04\x00\x00\x00Alexq\x06X\x04\x00\x00\x00argsq\x07]q\x08X\x06\x00\x00\x00typeIDq\tX\x06\x00\x00\x00serverq\nX\x04\x00\x00\x00destq\x0bh\nub.'Traceback (most recent call last):
+  File "./Server.py", line 88, in <module>
+    if __name__ == "__main__": main()
+  File "./Server.py", line 83, in main
+    sock.bind(('',8881))
+OSError: [Errno 98] Address already in use
+Connected from:  ('160.94.47.18', 51156)
+Assigned name Alec to address  ('160.94.47.18', 51156)
+Got message from Alec
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00argsq\x03]q\x04X\x06\x00\x00\x00typeIDq\x05X\x06\x00\x00\x00serverq\x06X\x04\x00\x00\x00destq\x07h\x06X\x06\x00\x00\x00sourceq\x08X\x04\x00\x00\x00Alecq\tX\x03\x00\x00\x00cmdq\nX\x06\x00\x00\x00\\usersq\x0bub.'
+New data!
+Server command:  \users
+Got message from Alec
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00argsq\x03]q\x04X\x06\x00\x00\x00typeIDq\x05X\x06\x00\x00\x00serverq\x06X\x04\x00\x00\x00destq\x07h\x06X\x06\x00\x00\x00sourceq\x08X\x04\x00\x00\x00Alecq\tX\x03\x00\x00\x00cmdq\nX\x06\x00\x00\x00\\usersq\x0bub.'
+New data!
+Server command:  \users
+Got message from Alec
+newData:  b''
+Disconnected from:  ('160.94.47.18', 51156)
+Connected from:  ('160.94.47.18', 58891)
+Assigned name Bill to address  ('160.94.47.18', 58891)
+Got message from Bill
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00destq\x03X\x06\x00\x00\x00serverq\x04X\x03\x00\x00\x00cmdq\x05X\x06\x00\x00\x00\\usersq\x06X\x06\x00\x00\x00sourceq\x07X\x04\x00\x00\x00Billq\x08X\x06\x00\x00\x00typeIDq\th\x04X\x04\x00\x00\x00argsq\n]q\x0bub.'
+New data!
+Server command:  \users
+Got message from Bill
+newData:  b''
+Disconnected from:  ('160.94.47.18', 58891)
+Connected from:  ('160.94.47.18', 20630)
+Assigned name test to address  ('160.94.47.18', 20630)
+Got message from test
+newData:  b''
+Disconnected from:  ('160.94.47.18', 20630)
+Connected from:  ('131.212.248.50', 39946)
+Assigned name Huldra to address  ('131.212.248.50', 39946)
+Got message from Huldra
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00sourceq\x03X\x06\x00\x00\x00Huldraq\x04X\x06\x00\x00\x00typeIDq\x05X\x06\x00\x00\x00serverq\x06X\x03\x00\x00\x00cmdq\x07X\x06\x00\x00\x00\\usersq\x08X\x04\x00\x00\x00destq\th\x06X\x04\x00\x00\x00argsq\n]q\x0bub.'
+New data!
+Server command:  \users
+Connected from:  ('182.118.54.23', 36979)
+Assigned name GET / HTTP/1.0
+Host: 73.242.73.117
+
+ to address  ('182.118.54.23', 36979)
+Got message from GET / HTTP/1.0
+Host: 73.242.73.117
+
+
+newData:  b''
+Disconnected from:  ('182.118.54.23', 36979)
+Connected from:  ('131.212.249.116', 4096)
+Assigned name Alex to address  ('131.212.249.116', 4096)
+Got message from Alex
+newData:  b''
+Disconnected from:  ('131.212.249.116', 4096)
+Connected from:  ('131.212.249.116', 4101)
+Assigned name Alex to address  ('131.212.249.116', 4101)
+Got message from Alex
+newData:  b''
+Disconnected from:  ('131.212.249.116', 4101)
+Connected from:  ('131.212.249.116', 4106)
+Assigned name Alex to address  ('131.212.249.116', 4106)
+Got message from Alex
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x04\x00\x00\x00destq\x03X\x00\x00\x00\x00q\x04X\x04\x00\x00\x00textq\x05X\x05\x00\x00\x00helloq\x06X\x06\x00\x00\x00typeIDq\x07X\x06\x00\x00\x00clientq\x08X\x06\x00\x00\x00sourceq\tX\x04\x00\x00\x00Alexq\nub.'
+New data!
+Client message:  [Alex=>]: hello
+Got message from Alex
+newData:  b''
+Disconnected from:  ('131.212.249.116', 4106)
+Connected from:  ('131.212.249.116', 4221)
+Assigned name Alex to address  ('131.212.249.116', 4221)
+Got message from Alex
+newData:  b'\x80\x03cMessage\nClientMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00typeIDq\x03X\x06\x00\x00\x00clientq\x04X\x06\x00\x00\x00sourceq\x05X\x04\x00\x00\x00Alexq\x06X\x04\x00\x00\x00textq\x07X\x05\x00\x00\x00Helloq\x08X\x04\x00\x00\x00destq\tX\x00\x00\x00\x00q\nub.'
+New data!
+Client message:  [Alex=>]: Hello
+Got message from Alex
+newData:  b'\x80\x03cMessage\nServerMessage\nq\x00)\x81q\x01}q\x02(X\x06\x00\x00\x00typeIDq\x03X\x06\x00\x00\x00serverq\x04X\x06\x00\x00\x00sourceq\x05X\x04\x00\x00\x00Alexq\x06X\x03\x00\x00\x00cmdq\x07X\x06\x00\x00\x00\\usersq\x08X\x04\x00\x00\x00argsq\t]q\nX\x04\x00\x00\x00destq\x0bh\x04ub.'
+New data!
+Server command:  \users
+Got message from Alex
+newData:  b''
+Disconnected from:  ('131.212.249.116', 4221)
+Got message from Huldra
+Traceback (most recent call last):
+  File "./Server.py", line 88, in <module>
+    if __name__ == "__main__": main()
+  File "./Server.py", line 86, in main
+    serv.runServer()
+  File "./Server.py", line 38, in runServer
+    newData = event.recv(1024)
+TimeoutError: [Errno 110] Connection timed out
+Please enter hostname/ip-address: Traceback (most recent call last):
+  File "./Server.py", line 136, in <module>
+    if __name__ == "__main__": main()
+  File "./Server.py", line 124, in main
+    hostname = input("Please enter hostname/ip-address: ")
+OSError: [Errno 9] Bad file descriptor

@@ -109,8 +109,18 @@ class Server:
             self.socket.close()
 
 def main():
+    nextAction = ""
+    passwd = ""
+    for arg in sys.argv:
+        if nextAction == "":
+            if arg == "-p":
+                nextAction = "-p"
+        else:
+            if nextAction == "-p":
+                nextAction = ""
+                passwd = arg
     config = open("Config.txt")
-    hostname = ""
+    hostname = "null"
     port = 0
     for line in config:
         if line[0] == '#':
@@ -120,11 +130,12 @@ def main():
             hostname = words[1].rstrip()
         elif words[0] == 'port':
             port = int(words[1].rstrip())
-    if hostname == "":
+    if hostname == "null":
         hostname = input("Please enter hostname/ip-address: ")
     if port == 0:
         port = int(input("Please enter port number: "))
-    passwd = input("Please enter a password: ")
+    if passwd == "":
+        passwd = input("Please enter a password: ")
     sock = socket(AF_INET,SOCK_STREAM)
     print("hostname: ",hostname)
     print("port: ",port)
