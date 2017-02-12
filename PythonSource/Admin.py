@@ -2,11 +2,13 @@
 
 from Client import *
 import sys
+from getpass import getpass
 
 class Admin(Client):
     def __init__(self,sock):
         super().__init__(sock)
-        self.password = input("Please enter server's password: ")
+        print("Please enter server's password: ",end="")
+        self.password = getpass()
         self.verify(self.password)
     def verify(self,password):
         ver = ServerMessage("\\passwd",[self.password],self.name,"server")

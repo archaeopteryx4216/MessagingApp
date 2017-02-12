@@ -4,6 +4,7 @@ from Message import *
 from socket import *
 from select import *
 import sys
+from getpass import getpass
 
 class Server:
     def __init__(self,serverSocket,passwd):
@@ -135,7 +136,8 @@ def main():
     if port == 0:
         port = int(input("Please enter port number: "))
     if passwd == "":
-        passwd = input("Please enter a password: ")
+        print("Please enter a password: ",end="")
+        passwd = getpass()
     sock = socket(AF_INET,SOCK_STREAM)
     print("hostname: ",hostname)
     print("port: ",port)

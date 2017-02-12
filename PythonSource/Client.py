@@ -4,8 +4,6 @@ from socket import *
 from threading import *
 import pickle
 
-
-
 class Client:
 # Constructor for the class
     def __init__(self,socket):
